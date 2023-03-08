@@ -56,7 +56,6 @@ class VistasBasadasClases(View):
 
     
     def delete(self,request,id=0):
-        jsonData=json.loads(request.body)
         companies = list(Company.objects.filter(id=id).values())
         if len(companies)> 0:
             company=Company.objects.get(id=id)
